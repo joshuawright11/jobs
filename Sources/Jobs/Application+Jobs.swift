@@ -81,6 +81,7 @@ extension Application {
         ) -> JobsQueue {
             return self.driver.makeQueue(
                 with: .init(
+                    app: self.application,
                     queueName: name,
                     configuration: self.configuration,
                     logger: logger ?? self.application.logger,

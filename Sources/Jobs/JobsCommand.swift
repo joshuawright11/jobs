@@ -123,6 +123,7 @@ public final class JobsCommand: Command {
         }
         
         let context = JobContext(
+            app: self.application,
             queueName: JobsQueueName(string: "scheduled"),
             configuration: self.application.jobs.configuration,
             logger: self.application.logger,
